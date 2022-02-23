@@ -1,5 +1,7 @@
-Django
+fdsfDjango==3.2.9
 djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
 django-heroku
 PyJWT
 gunicorn
