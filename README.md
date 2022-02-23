@@ -1,5 +1,5 @@
 # Django social network
-A simple social network written wia Django Framework.
+A simple social network written wia Django REST framework.
 ____
 ## Functional:
 
