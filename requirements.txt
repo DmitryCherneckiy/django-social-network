@@ -1,4 +1,4 @@
-fdsfDjango==3.2.9
+Django==3.2.9
 djangorestframework
 djangorestframework-simplejwt
 django-cors-headers
