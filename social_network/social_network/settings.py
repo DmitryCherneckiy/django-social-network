@@ -1,4 +1,6 @@
 import django_heroku
+import os
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -14,7 +16,7 @@ SECRET_KEY = 'django-insecure-q0se124!#eh#%vwwo1-=1%n&b5&+om_bq)d#f=9!)de12ov%@x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -107,6 +109,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
